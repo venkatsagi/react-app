@@ -1,17 +1,19 @@
 import React, {PureComponent} from 'react';
+import {isEmpty, map} from 'lodash';
 
 class TableComponent extends PureComponent {
   render() {
     const {data, columns} = this.props;
+    console.log(data, !isEmpty(data));
     return (
      <table className="table">
       <thead>
         <tr>
-          {columns.map(column => <th>{column}</th>)}
+          {columns && columns.map(column => <th>{column}</th>)}
         </tr>
       </thead>
       <tbody>
-      {data.map((row, index) => {
+      {!isEmpty(data) && map(data, row => {
         return (
           <tr>
             {columns.map(column => <td>{row[column]}</td>)}

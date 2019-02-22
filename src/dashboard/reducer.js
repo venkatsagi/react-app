@@ -1,70 +1,14 @@
-const data = [{
-        'Service': 'Veterinary Assitance',
-        'Cost/Unit': 50,
-        'Unit': '1 Hour',
-        'Units Requested': 12
-    },
-    {
-        'Service': 'Veterinary Assitance',
-        'Cost/Unit': 50,
-        'Unit': '1 Hour',
-        'Units Requested': 12
-    }, 
-    {
-        'Service': 'Veterinary Assitance',
-        'Cost/Unit': 50,
-        'Unit': '1 Hour',
-        'Units Requested': 12
-    }, 
-    {
-        'Service': 'Veterinary Assitance',
-        'Cost/Unit': 50,
-        'Unit': '1 Hour',
-        'Units Requested': 12
-    }, 
-    {
-        'Service': 'Veterinary Assitance',
-        'Cost/Unit': 50,
-        'Unit': '1 Hour',
-        'Units Requested': 12
-    }, 
-    {
-        'Service': 'Veterinary Assitance',
-        'Cost/Unit': 50,
-        'Unit': '1 Hour',
-        'Units Requested': 12
-    }, 
-    {
-        'Service': 'Veterinary Assitance',
-        'Cost/Unit': 50,
-        'Unit': '1 Hour',
-        'Units Requested': 12
-    }, 
-    {
-        'Service': 'Veterinary Assitance',
-        'Cost/Unit': 50,
-        'Unit': '1 Hour',
-        'Units Requested': 12
-    }, 
-    {
-        'Service': 'Veterinary Assitance',
-        'Cost/Unit': 50,
-        'Unit': '1 Hour',
-        'Units Requested': 12
-    }, 
-    {
-        'Service': 'foo',
-        'Unit': null,
-        'Cost/Unit': undefined,
-        'Units Requested': 42
-}];
-
+import {setIn} from 'immutable';
+import {UPDATE_DATA} from './actions';
 const dashboardInitialState = {
-    data
+    data: []
 };
 
 const dashboardReducer = (state = dashboardInitialState, action) => {
-    switch (action.type) {        
+    const {type, payload} = action;
+    switch (type) {   
+        case UPDATE_DATA: 
+            return setIn(state, ["data"], payload);
         default:
           return state
     }
