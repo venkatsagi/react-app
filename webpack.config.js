@@ -13,6 +13,11 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'eslint-loader'],
       }
     ],
   },
