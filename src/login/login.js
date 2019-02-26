@@ -28,6 +28,9 @@ class Login extends PureComponent {
           placeholder="Enter Username"
           labelName="Username" value={userName}
           onChange={updateUserName}
+          icon
+          iconName="envelope"
+          size="sm"
         />
         <TextInput
           type="password"
@@ -35,6 +38,9 @@ class Login extends PureComponent {
           labelName="password"
           value={password}
           onChange={updatePassword}
+          icon
+          iconName="key"
+          size="sm"
         />
         <button type="submit" onClick={this.navigateToDashboard}>Login</button>
       </div>

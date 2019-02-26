@@ -13,7 +13,8 @@
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "build": "webpack --mode production",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "fix": "eslint src/index.js --fix"
   },
   "keywords": [],
   "author": "",
@@ -54,6 +55,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
     "classnames": "^2.2.6",

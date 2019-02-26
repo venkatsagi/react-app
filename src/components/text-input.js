@@ -1,13 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 const TextInput = ({
-  value, onChange, placeholder, type, labelName, className
+  value, onChange, placeholder, type, labelName, className, icon, iconName, size
 }) => {
   return (
     <div>
-      <label><b>{labelName}</b></label>
+      <label>
+        {icon
+          && <React.Fragment>
+               <FontAwesomeIcon icon={iconName} size={size} />
+             {' '}
+             </React.Fragment>
+        }
+        <b>{labelName}</b>
+      </label>
       <br />
       <input
         type={type}
@@ -26,7 +35,10 @@ TextInput.propTypes = {
   placeholder: PropTypes.string,
   type: PropTypes.string,
   labelName: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  icon: PropTypes.bool,
+  iconName: PropTypes.string,
+  size: PropTypes.string
 };
 
 export default TextInput;
