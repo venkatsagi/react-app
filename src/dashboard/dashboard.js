@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import TableComponent from '../components/simple-table';
+import SimpleTable from '../components/simple-table';
 import {dashboardActions} from './actions';
 
 const columns = ['Service', 'Cost/Unit', 'Unit', 'Units Requested'];
@@ -24,12 +24,12 @@ class Dashboard extends PureComponent {
     const {data} = this.props;
     return (
       <React.Fragment>
-        <TableComponent
+        <SimpleTable
           columns={columns}
           data={data}
         />
         <button onClick={this.navigateToLogin}>Back to Login</button>
-          </React.Fragment>
+      </React.Fragment>
     );
   }
 }

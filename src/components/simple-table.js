@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {isEmpty, map} from 'lodash';
 
-class TableComponent extends PureComponent {
+class SimpleTable extends PureComponent {
   render() {
     const {data, columns} = this.props;
     return (
@@ -27,9 +27,9 @@ class TableComponent extends PureComponent {
   }
 }
 
-TableComponent.propTypes = {
+SimpleTable.propTypes = {
   data: PropTypes.array,
   columns: PropTypes.array
 };
 
-export default TableComponent;
+export default SimpleTable;
