@@ -26,7 +26,8 @@ class Login extends PureComponent {
         <TextInput
           type="text"
           placeholder="Enter Username"
-          labelName="Username" value={userName}
+          labelName="Username"
+          value={userName}
           onChange={updateUserName}
           icon
           iconName="envelope"

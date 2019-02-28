@@ -1,15 +1,16 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Login from './login/login';
-import Dashboard from './dashboard/dashboard';
+
+const Login = lazy(() => import('./login/login'));
+const Dashboard = lazy(() => import('./dashboard/dashboard'));
 
 const Root = () => (
   <Router>
-    <React.Fragment>
+    <Suspense fallback={<div>Loading...</div>}>
       <Route exact path="/" component={Login} />
       <Route path="/login" component={Login} />
       <Route path="/dashboard" component={Dashboard} />
-    </React.Fragment>
+    </Suspense>
   </Router>
 );
 

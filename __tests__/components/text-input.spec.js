@@ -10,7 +10,7 @@ describe('TextInput', () => {
   });
 
   it('should render text input correctly with given props', () => {
-    const value = 'john';
+    const value = 'John';
     const placeholder = 'Enter username';
     const type = 'text';
     const labelName = 'User Name';
