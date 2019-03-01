@@ -8,14 +8,12 @@ const updateData = payload => ({
 });
 
 const fetchData = () => async (dispatch) => {
-  const userData = await service
-    .fetchData().then((res) => {
-      const {data} = res;
-      dispatch(updateData(data));
-    }).catch((error) => {
-      dispatch(updateData(error));
-    });
-  console.log(userData);
+  const userData = await service.fetchData();
+  try {
+    dispatch(updateData(userData));
+  } catch {
+    // Need to handle error case
+  }
 };
 
 export const dashboardActions = {

@@ -9,5 +9,5 @@ export const fetchData = () => {
       'Content-Type': 'application/json',
       Accept: 'application/json'
     }
-  });
+  }).then(res => res.data);
 };
