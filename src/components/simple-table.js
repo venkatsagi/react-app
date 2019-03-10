@@ -1,12 +1,13 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import {isEmpty, map} from 'lodash';
 
 class SimpleTable extends PureComponent {
   render() {
-    const {data, columns} = this.props;
+    const {data, columns, className} = this.props;
     return (
-     <table className="table">
+     <table className={classNames(className, 'table')}>
       <thead>
         <tr>
           {columns && columns.map(column => <th>{column}</th>)}
@@ -29,7 +30,8 @@ class SimpleTable extends PureComponent {
 
 SimpleTable.propTypes = {
   data: PropTypes.array,
-  columns: PropTypes.array
+  columns: PropTypes.array,
+  className: PropTypes.string
 };
 
 export default SimpleTable;

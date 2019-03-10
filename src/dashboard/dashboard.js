@@ -23,13 +23,13 @@ class Dashboard extends PureComponent {
   render() {
     const {data} = this.props;
     return (
-      <React.Fragment>
+      <div className="dashbaord">
         <SimpleTable
           columns={columns}
           data={data}
         />
         <button onClick={this.navigateToLogin}>Back to Login</button>
-      </React.Fragment>
+      </div>
     );
   }
 }
