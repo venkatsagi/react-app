@@ -20,7 +20,8 @@
     "build": "webpack --mode production",
     "test": "jest",
     "test:watch": "jest --watch",
-    "fix": "eslint src/index.js --fix"
+    "fix": "eslint src/index.js --fix",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
