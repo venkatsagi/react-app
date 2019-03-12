@@ -1,7 +1,11 @@
 {
   "name": "react-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
+  "engines": {
+    "npm": "6.2.0",
+    "node": "10.9.0"
+  },
   "main": "index.js",
   "jest": {
     "setupFilesAfterEnv": [
