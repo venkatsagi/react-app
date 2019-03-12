@@ -26,7 +26,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   output: {
-    path: `${__dirname}/dist`,
+    path: `${__dirname}/build`,
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js'
   },
@@ -55,7 +55,7 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: './dist',
+    contentBase: './build',
     hot: true,
     historyApiFallback: true
   }
