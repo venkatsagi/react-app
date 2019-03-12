@@ -16,7 +16,8 @@
     ]
   },
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "dev-start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "start": "node server.js",
     "build": "webpack --mode production",
     "test": "jest",
     "test:watch": "jest --watch",
